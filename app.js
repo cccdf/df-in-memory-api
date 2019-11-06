@@ -4,7 +4,7 @@ const cors = require("cors");
 
 //middleware
 app.use(express.json());
-app.use(cors({ origin: "https:/localhost:3000" }));
+app.use(cors());
 
 const db = {
   posts: [
@@ -81,3 +81,4 @@ app.put("/api/posts/:id", (request, response) => {
 });
 
 app.listen(process.env.PORT || 8000);
+//docker? run automatically
